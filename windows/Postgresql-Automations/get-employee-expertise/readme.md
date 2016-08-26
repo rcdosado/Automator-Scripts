@@ -12,6 +12,13 @@ The script herein allows the user to get a user's information given the lastname
 Expected Result
 ---------------
 
-automating the extraction of certain column based on given parameters
+automating the extraction of certain column based on given parameters, output is the actual result of the sql query
+
+Example Usage 
+-------------
+ 
+ ```batch
+ start.bat > output.txt && notepad output.txt
+ ```
 
 
