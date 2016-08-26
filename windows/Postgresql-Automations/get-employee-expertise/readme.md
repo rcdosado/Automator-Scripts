@@ -1,5 +1,5 @@
 About
------
+=====
 
 A psycopg2 script to interface cmd.exe terminal to postgresql server
 
