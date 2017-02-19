@@ -4,6 +4,5 @@ see the code for the implementation
 
 # Compilation
 csc.exe /target:exe windowspy.cs
-windowspy.exe
 
 
