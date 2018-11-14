@@ -1,0 +1,16 @@
+Sub AutoSpellCorrect()
+    Dim Rng As Range, oSuggestions As Variant, StrExcl As String
+    StrExcl = ",word1,word2,word3,"
+    For Each Rng In ActiveDocument.Range.SpellingErrors
+      If InStr(StrExcl, "," & Rng.Text & ",") = 0 Then
+        If Rng.GetSpellingSuggestions.Count > 0 Then
+          Set oSuggestions = Rng.GetSpellingSuggestions
+          Rng.Text = oSuggestions(1)
+        Else
+          Rng.HighlightColorIndex = wdPink
+        End If
+      Else
+        Rng.HighlightColorIndex = wdBrightGreen
+      End If
+    Next
+End Sub
